@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Fade Room VIP Barber Studio | Precision Cuts in Orange, CA</title>
+  <meta name="description" content="Premium barbering in Orange, California. Precision fades, beard work, braids, loc care and full VIP grooming experiences. Book The Fade Room VIP Barber Studio online." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta property="og:title" content="The Fade Room VIP Barber Studio" />
+  <meta property="og:description" content="Precision barbering. Private-studio energy. A 5-star experience in Orange, CA." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://d2zdpiztbgorvt.cloudfront.net" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0a0a'/%3E%3Cpath d='M16 15h34v9H27v8h18v9H27v14H16z' fill='%23cda064'/%3E%3C/svg%3E" />
+
+  <style>
+    :root{
+      --ink:#090909;
+      --ink-2:#111111;
+      --ink-3:#181818;
+      --paper:#f3eee6;
+      --paper-2:#ddd4c7;
+      --muted:#a8a098;
+      --line:rgba(255,255,255,.12);
+      --gold:#cda064;
+      --gold-2:#f0c98e;
+      --red:#e7472e;
+      --white:#fff;
+      --radius:24px;
+      --shadow:0 30px 80px rgba(0,0,0,.34);
+      --container:min(1180px, calc(100% - 40px));
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth; background:var(--ink)}
+    body{
+      margin:0;
+      color:var(--paper);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(205,160,100,.08), transparent 28rem),
+        radial-gradient(circle at 86% 42%, rgba(231,71,46,.06), transparent 24rem),
+        var(--ink);
+      font-family:"Manrope",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-size:16px;
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    body::before{
+      content:""; position:fixed; inset:0; pointer-events:none; z-index:9999; opacity:.035;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E");
+    }
+    img{display:block; max-width:100%}
+    a{color:inherit; text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    ::selection{background:var(--gold); color:var(--ink)}
+
+    .skip-link{position:absolute; left:-999px; top:10px; z-index:99999; background:#fff; color:#000; padding:12px 18px; border-radius:12px}
+    .skip-link:focus{left:10px}
+    .container{width:var(--container); margin-inline:auto}
+    .eyebrow{display:flex; align-items:center; gap:11px; margin:0 0 18px; color:var(--gold-2); font-size:.75rem; letter-spacing:.18em; text-transform:uppercase; font-weight:800}
+    .eyebrow::before{content:""; width:34px; height:1px; background:currentColor}
+    .section{padding:120px 0; position:relative}
+    .section-head{display:grid; grid-template-columns:1.1fr .7fr; gap:70px; align-items:end; margin-bottom:58px}
+    .section-title{font-family:"Bebas Neue",Impact,sans-serif; letter-spacing:.01em; font-size:clamp(3.2rem,7vw,6.8rem); line-height:.88; margin:0; font-weight:400; text-transform:uppercase}
+    .section-copy{color:var(--muted); max-width:560px; margin:0}
+    .gold{color:var(--gold)}
+    .outline-text{-webkit-text-stroke:1px rgba(243,238,230,.5); color:transparent}
+
+    .btn{min-height:56px; padding:0 22px; display:inline-flex; align-items:center; justify-content:center; gap:12px; border:1px solid transparent; font-weight:800; text-transform:uppercase; letter-spacing:.08em; font-size:.76rem; border-radius:999px; transition:.25s ease; position:relative; overflow:hidden; isolation:isolate}
+    .btn::before{content:""; position:absolute; inset:0; z-index:-1; transform:translateX(-105%); background:var(--paper); transition:.35s cubic-bezier(.2,.8,.2,1)}
+    .btn:hover::before{transform:translateX(0)}
+    .btn-primary{background:var(--gold); color:var(--ink)}
+    .btn-primary:hover{color:var(--ink); transform:translateY(-2px); box-shadow:0 18px 44px rgba(205,160,100,.22)}
+    .btn-dark{background:var(--ink); color:var(--paper); border-color:rgba(255,255,255,.15)}
+    .btn-dark::before{background:var(--gold)}
+    .btn-dark:hover{color:var(--ink)}
+    .btn-ghost{border-color:rgba(255,255,255,.2); color:var(--paper)}
+    .btn-ghost::before{background:var(--paper)}
+    .btn-ghost:hover{color:var(--ink); border-color:var(--paper)}
+    .btn svg{width:17px; height:17px; flex:none}
+
+    /* Header */
+    .site-header{position:fixed; inset:0 0 auto; z-index:1000; transition:.3s ease}
+    .site-header.scrolled{background:rgba(8,8,8,.9); backdrop-filter:blur(18px); border-bottom:1px solid var(--line)}
+    .nav{height:94px; display:flex; align-items:center; justify-content:space-between; gap:30px}
+    .brand{display:flex; align-items:center; gap:13px; min-width:230px}
+    .brand-mark{width:48px; height:48px; display:grid; place-items:center; border:1px solid rgba(205,160,100,.45); color:var(--gold); font-family:"Bebas Neue",sans-serif; font-size:1.5rem; letter-spacing:.04em; transform:rotate(-3deg); background:rgba(0,0,0,.25)}
+    .brand-copy strong{display:block; font-family:"Bebas Neue",sans-serif; letter-spacing:.08em; font-size:1.3rem; line-height:1}
+    .brand-copy span{display:block; font-size:.62rem; color:var(--muted); text-transform:uppercase; letter-spacing:.22em; margin-top:4px}
+    .nav-links{display:flex; align-items:center; gap:28px; list-style:none; padding:0; margin:0}
+    .nav-links a{font-size:.75rem; text-transform:uppercase; letter-spacing:.11em; color:#c6c0b9; font-weight:700; transition:.2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-actions{display:flex; align-items:center; gap:10px}
+    .open-pill{display:flex; align-items:center; gap:8px; font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--paper-2); padding:10px 13px; border:1px solid var(--line); border-radius:999px}
+    .open-dot{width:7px; height:7px; background:#49ca76; border-radius:50%; box-shadow:0 0 0 5px rgba(73,202,118,.12)}
+    .open-dot.closed{background:#e66655; box-shadow:0 0 0 5px rgba(230,102,85,.12)}
+    .menu-toggle{display:none; width:46px; height:46px; border:1px solid var(--line); background:transparent; color:#fff; border-radius:50%}
+
+    /* Hero */
+    .hero{min-height:100svh; display:grid; align-items:end; padding:155px 0 70px; position:relative; overflow:hidden}
+    .hero::after{content:""; position:absolute; inset:auto -12vw -34vw auto; width:60vw; height:60vw; border:1px solid rgba(205,160,100,.13); border-radius:50%; box-shadow:0 0 0 80px rgba(205,160,100,.018),0 0 0 160px rgba(205,160,100,.012); pointer-events:none}
+    .hero-grid{display:grid; grid-template-columns:1.08fr .92fr; gap:64px; align-items:center; position:relative; z-index:1}
+    .hero-kicker{display:flex; align-items:center; gap:14px; margin-bottom:25px; color:var(--gold-2); text-transform:uppercase; letter-spacing:.16em; font-size:.72rem; font-weight:800}
+    .hero-kicker .rating{display:flex; gap:3px; color:var(--gold)}
+    .hero h1{font-family:"Bebas Neue",Impact,sans-serif; font-weight:400; font-size:clamp(5rem,10.5vw,10.4rem); letter-spacing:-.02em; line-height:.77; text-transform:uppercase; margin:0; max-width:760px}
+    .hero h1 .small-line{display:block; font-size:.58em; color:var(--paper)}
+    .hero h1 .stroke{display:block; color:transparent; -webkit-text-stroke:1.3px rgba(243,238,230,.68)}
+    .hero-copy{max-width:610px; color:#bcb5ad; font-size:1.03rem; margin:31px 0 0; border-left:1px solid var(--gold); padding-left:20px}
+    .hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:34px}
+    .hero-proof{display:flex; flex-wrap:wrap; align-items:center; gap:24px; margin-top:34px; color:#cfc8c0; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700}
+    .proof-item{display:flex; align-items:center; gap:8px}
+    .proof-item svg{width:17px; color:var(--gold)}
+
+    .hero-visual{position:relative; min-height:620px}
+    .hero-photo-main{position:absolute; inset:0 0 60px 80px; overflow:hidden; border-radius:180px 0 180px 0; box-shadow:var(--shadow); background:#151515}
+    .hero-photo-main img{width:100%; height:100%; object-fit:cover; object-position:center; filter:saturate(.88) contrast(1.04)}
+    .hero-photo-main::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.52))}
+    .floating-card{position:absolute; left:0; bottom:16px; width:240px; padding:25px; background:rgba(18,18,18,.92); backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,.13); box-shadow:var(--shadow)}
+    .floating-card .big{font-family:"Bebas Neue",sans-serif; font-size:4rem; line-height:.8; color:var(--gold)}
+    .floating-card strong{display:block; text-transform:uppercase; letter-spacing:.09em; font-size:.78rem; margin-top:12px}
+    .floating-card span{display:block; color:var(--muted); font-size:.72rem; margin-top:5px}
+    .vertical-label{position:absolute; right:-6px; top:42px; writing-mode:vertical-rl; transform:rotate(180deg); text-transform:uppercase; letter-spacing:.28em; font-size:.62rem; color:var(--muted)}
+    .photo-badge{position:absolute; right:-18px; bottom:30px; width:126px; height:126px; border-radius:50%; border:1px solid rgba(205,160,100,.55); display:grid; place-items:center; background:var(--ink); color:var(--gold); text-align:center; font-family:"Bebas Neue",sans-serif; font-size:1rem; letter-spacing:.12em; animation:float 4s ease-in-out infinite}
+    .photo-badge svg{position:absolute; width:78px; opacity:.08}
+    @keyframes float{50%{transform:translateY(-10px) rotate(3deg)}}
+
+    .marquee{border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:16px 0; overflow:hidden; background:#0d0d0d}
+    .marquee-track{display:flex; width:max-content; animation:marquee 30s linear infinite}
+    .marquee-item{display:flex; align-items:center; gap:22px; padding-right:22px; font-family:"Bebas Neue",sans-serif; font-size:1.25rem; letter-spacing:.08em; color:#bbb3aa}
+    .marquee-item i{width:7px; height:7px; transform:rotate(45deg); background:var(--gold)}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+
+    /* Stats */
+    .trust-strip{display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; margin-top:70px; background:rgba(255,255,255,.018)}
+    .trust-stat{padding:28px; border-right:1px solid var(--line)}
+    .trust-stat:last-child{border-right:0}
+    .trust-stat strong{display:block; font-family:"Bebas Neue",sans-serif; font-size:2.55rem; line-height:1; color:var(--paper)}
+    .trust-stat span{display:block; margin-top:7px; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em}
+
+    /* Services */
+    .services-section{background:var(--paper); color:var(--ink)}
+    .services-section::before{content:""; position:absolute; inset:0; background:linear-gradient(130deg,transparent 58%,rgba(205,160,100,.14)); pointer-events:none}
+    .services-section .eyebrow{color:#856335}
+    .services-section .section-copy{color:#625d56}
+    .service-tabs{display:flex; flex-wrap:wrap; gap:9px; margin-bottom:30px}
+    .service-tab{border:1px solid rgba(0,0,0,.15); background:transparent; color:#5f5a53; padding:10px 16px; border-radius:999px; text-transform:uppercase; font-size:.7rem; letter-spacing:.08em; font-weight:800; transition:.2s}
+    .service-tab.active,.service-tab:hover{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+    .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .service-card{background:#e9e1d6; border:1px solid rgba(0,0,0,.08); padding:30px; min-height:290px; display:flex; flex-direction:column; position:relative; overflow:hidden; transition:.3s ease; border-radius:20px}
+    .service-card::before{content:""; position:absolute; width:170px; height:170px; border:1px solid rgba(0,0,0,.09); border-radius:50%; right:-80px; top:-85px; transition:.35s}
+    .service-card:hover{transform:translateY(-7px); background:#f8f4ed; box-shadow:0 24px 55px rgba(62,45,22,.12)}
+    .service-card:hover::before{transform:scale(1.25); border-color:rgba(205,160,100,.5)}
+    .service-number{font-family:"Bebas Neue",sans-serif; color:#a89780; font-size:1rem; letter-spacing:.08em}
+    .service-card h3{font-family:"Bebas Neue",sans-serif; font-size:2.3rem; line-height:.95; font-weight:400; margin:28px 0 12px; max-width:250px}
+    .service-card p{font-size:.84rem; color:#68625b; margin:0 0 20px}
+    .service-footer{margin-top:auto; display:flex; align-items:end; justify-content:space-between; gap:16px}
+    .service-price span{display:block; font-size:.66rem; color:#7f7466; text-transform:uppercase; letter-spacing:.11em; font-weight:700}
+    .service-price strong{display:block; font-family:"Bebas Neue",sans-serif; font-size:2rem; line-height:1.1}
+    .round-arrow{width:42px; height:42px; border:1px solid rgba(0,0,0,.18); display:grid; place-items:center; border-radius:50%; transition:.2s}
+    .service-card:hover .round-arrow{background:var(--gold); border-color:var(--gold); transform:rotate(-35deg)}
+    .service-card[data-category].hidden{display:none}
+    .service-note{margin-top:24px; color:#71695f; font-size:.75rem}
+
+    /* Experience */
+    .experience-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:85px; align-items:center}
+    .portrait-stack{position:relative; min-height:720px}
+    .portrait-primary{position:absolute; left:0; top:0; width:76%; height:82%; overflow:hidden; border-radius:0 180px 0 180px; background:#151515}
+    .portrait-primary img{width:100%; height:100%; object-fit:cover}
+    .portrait-secondary{position:absolute; right:0; bottom:0; width:52%; height:48%; overflow:hidden; border:8px solid var(--ink); background:#222; box-shadow:var(--shadow)}
+    .portrait-secondary img{width:100%; height:100%; object-fit:cover}
+    .portrait-label{position:absolute; left:-28px; bottom:92px; background:var(--gold); color:var(--ink); padding:18px 20px; font-family:"Bebas Neue",sans-serif; font-size:1.3rem; letter-spacing:.08em; transform:rotate(-90deg); transform-origin:left bottom}
+    .experience-copy h2{font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:clamp(4rem,7vw,7rem); line-height:.86; margin:0 0 28px; text-transform:uppercase}
+    .experience-copy > p{color:var(--muted); max-width:610px}
+    .feature-list{margin-top:34px; display:grid; gap:0; border-top:1px solid var(--line)}
+    .feature-row{display:grid; grid-template-columns:58px 1fr auto; gap:18px; align-items:center; padding:20px 0; border-bottom:1px solid var(--line)}
+    .feature-icon{width:42px; height:42px; border-radius:50%; background:rgba(205,160,100,.12); display:grid; place-items:center; color:var(--gold)}
+    .feature-row strong{display:block; font-size:.92rem}
+    .feature-row span{display:block; color:var(--muted); font-size:.76rem; margin-top:2px}
+    .feature-row em{font-style:normal; color:var(--gold); font-size:.66rem; text-transform:uppercase; letter-spacing:.1em}
+
+    /* Style finder */
+    .finder-section{padding:30px 0 120px}
+    .finder{background:linear-gradient(135deg,#1d1b18,#111); border:1px solid var(--line); border-radius:32px; padding:58px; display:grid; grid-template-columns:.65fr 1fr; gap:70px; position:relative; overflow:hidden}
+    .finder::after{content:"FR"; position:absolute; right:-30px; bottom:-120px; font-family:"Bebas Neue",sans-serif; font-size:24rem; line-height:1; color:rgba(255,255,255,.025)}
+    .finder h2{font-family:"Bebas Neue",sans-serif; font-size:4.4rem; line-height:.88; font-weight:400; margin:0 0 18px}
+    .finder p{color:var(--muted); font-size:.88rem}
+    .finder-steps{position:relative; z-index:1}
+    .finder-question{margin-bottom:26px}
+    .finder-question label{display:block; color:var(--paper-2); font-size:.72rem; text-transform:uppercase; letter-spacing:.11em; margin-bottom:10px; font-weight:700}
+    .choice-row{display:flex; flex-wrap:wrap; gap:8px}
+    .choice{background:#181818; color:#bcb5ad; border:1px solid var(--line); padding:11px 14px; border-radius:999px; font-size:.76rem; transition:.2s}
+    .choice:hover,.choice.selected{background:var(--gold); color:var(--ink); border-color:var(--gold)}
+    .finder-result{margin-top:24px; border-top:1px solid var(--line); padding-top:24px; display:flex; align-items:center; justify-content:space-between; gap:20px}
+    .finder-result small{display:block; color:var(--muted); text-transform:uppercase; letter-spacing:.12em; font-size:.65rem}
+    .finder-result strong{display:block; font-family:"Bebas Neue",sans-serif; font-size:2.2rem; font-weight:400; color:var(--gold); margin-top:4px}
+
+    /* Gallery */
+    .gallery-section{padding-top:120px; background:#0d0d0d}
+    .gallery-grid{display:grid; grid-template-columns:1.25fr .75fr .75fr; grid-auto-rows:280px; gap:12px}
+    .gallery-item{overflow:hidden; position:relative; background:#171717; border-radius:4px; cursor:zoom-in}
+    .gallery-item:nth-child(1){grid-row:span 2}
+    .gallery-item:nth-child(4){grid-column:span 2}
+    .gallery-item img{width:100%; height:100%; object-fit:cover; transition:transform .65s cubic-bezier(.2,.8,.2,1),filter .35s}
+    .gallery-item:hover img{transform:scale(1.06); filter:saturate(1.05)}
+    .gallery-item::after{content:"View"; position:absolute; right:18px; bottom:18px; width:58px; height:58px; border-radius:50%; background:rgba(8,8,8,.75); backdrop-filter:blur(8px); display:grid; place-items:center; text-transform:uppercase; font-size:.6rem; letter-spacing:.1em; opacity:0; transform:translateY(8px); transition:.25s}
+    .gallery-item:hover::after{opacity:1; transform:none}
+    .gallery-cta{margin-top:30px; display:flex; align-items:center; justify-content:space-between; gap:30px; color:var(--muted); font-size:.8rem}
+
+    /* Team */
+    .team-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    .team-card{min-height:570px; position:relative; overflow:hidden; border-radius:24px; background:#171717}
+    .team-card img{width:100%; height:100%; object-fit:cover; filter:grayscale(100%); transition:.55s}
+    .team-card:hover img{filter:grayscale(20%); transform:scale(1.025)}
+    .team-card::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.88))}
+    .team-info{position:absolute; z-index:2; inset:auto 32px 31px; display:flex; justify-content:space-between; align-items:end; gap:20px}
+    .team-info h3{font-family:"Bebas Neue",sans-serif; font-size:3.2rem; line-height:.9; font-weight:400; margin:0}
+    .team-info p{margin:8px 0 0; font-size:.72rem; text-transform:uppercase; letter-spacing:.11em; color:#c6bfb7}
+    .social-circle{width:48px; height:48px; border-radius:50%; border:1px solid rgba(255,255,255,.3); display:grid; place-items:center; transition:.2s}
+    .social-circle:hover{background:var(--gold); color:var(--ink); border-color:var(--gold)}
+
+    /* Reviews */
+    .reviews-section{background:var(--gold); color:var(--ink); overflow:hidden}
+    .reviews-section .eyebrow{color:#513b1e}
+    .rating-lockup{display:flex; align-items:end; gap:22px}
+    .rating-lockup strong{font-family:"Bebas Neue",sans-serif; font-size:8rem; line-height:.7; font-weight:400}
+    .rating-lockup span{display:block; font-weight:800; text-transform:uppercase; letter-spacing:.08em; font-size:.8rem}
+    .rating-lockup small{display:block; margin-top:5px; color:#5c4528}
+    .reviews-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:15px; margin-top:50px}
+    .review-card{background:rgba(9,9,9,.92); color:var(--paper); padding:30px; min-height:310px; border-radius:20px; display:flex; flex-direction:column}
+    .review-stars{letter-spacing:.1em; color:var(--gold-2); font-size:.82rem}
+    .review-card blockquote{font-size:1rem; line-height:1.65; margin:28px 0; color:#e8e0d7}
+    .review-person{margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:14px; padding-top:20px; border-top:1px solid var(--line)}
+    .review-person strong{display:block; font-size:.8rem; text-transform:uppercase; letter-spacing:.08em}
+    .review-person span{display:block; color:var(--muted); font-size:.7rem; margin-top:3px}
+    .verified{font-size:.62rem; text-transform:uppercase; color:#7dd99b; letter-spacing:.09em}
+
+    /* Process */
+    .process-grid{display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); margin-top:45px}
+    .process-step{padding:35px 30px 10px 0; border-right:1px solid var(--line); margin-right:30px}
+    .process-step:last-child{border-right:0; margin-right:0}
+    .process-step .num{font-family:"Bebas Neue",sans-serif; font-size:5rem; color:rgba(205,160,100,.4); line-height:1}
+    .process-step h3{font-family:"Bebas Neue",sans-serif; font-size:2.2rem; font-weight:400; margin:22px 0 10px}
+    .process-step p{color:var(--muted); font-size:.83rem; margin:0}
+
+    /* Service Area */
+    .area-panel{display:grid; grid-template-columns:1fr 1fr; min-height:650px; background:#141414; border:1px solid var(--line); border-radius:28px; overflow:hidden}
+    .area-copy{padding:65px}
+    .area-copy h2{font-family:"Bebas Neue",sans-serif; font-size:5.2rem; line-height:.88; font-weight:400; margin:0 0 24px}
+    .area-copy p{color:var(--muted)}
+    .area-tags{display:flex; flex-wrap:wrap; gap:8px; margin:30px 0 38px}
+    .area-tag{border:1px solid var(--line); color:#d6cec5; padding:9px 13px; border-radius:999px; font-size:.7rem; text-transform:uppercase; letter-spacing:.08em}
+    .map-visual{position:relative; min-height:560px; background:
+      linear-gradient(rgba(8,8,8,.2),rgba(8,8,8,.2)),
+      url("https://maps.googleapis.com/maps/api/staticmap?center=763+S+Main+St,+Orange,+CA+92868&zoom=13&size=900x900&maptype=roadmap&style=feature:all%7Celement:geometry%7Ccolor:0x1b1b1b&style=feature:all%7Celement:labels.text.fill%7Ccolor:0xa5a5a5&style=feature:road%7Celement:geometry%7Ccolor:0x3a3a3a&style=feature:water%7Celement:geometry%7Ccolor:0x111111") center/cover;
+    }
+    .map-visual::before{content:""; position:absolute; inset:0; background:radial-gradient(circle at center,transparent 0 15%,rgba(9,9,9,.45) 76%)}
+    .map-fallback{position:absolute; inset:0; display:grid; place-items:center; background:
+      radial-gradient(circle at 55% 48%,rgba(205,160,100,.12),transparent 20%),
+      repeating-linear-gradient(32deg,transparent 0 37px,rgba(255,255,255,.035) 38px 39px),
+      repeating-linear-gradient(115deg,transparent 0 58px,rgba(255,255,255,.025) 59px 60px),#121212;
+    }
+    .pin{position:relative; z-index:2; width:92px; height:92px; border-radius:50% 50% 50% 0; transform:rotate(-45deg); background:var(--gold); box-shadow:0 25px 60px rgba(205,160,100,.35); display:grid; place-items:center}
+    .pin span{transform:rotate(45deg); color:var(--ink); font-family:"Bebas Neue",sans-serif; font-size:1.5rem}
+    .map-card{position:absolute; z-index:3; left:30px; right:30px; bottom:30px; background:rgba(8,8,8,.9); border:1px solid var(--line); backdrop-filter:blur(12px); padding:22px; display:flex; justify-content:space-between; gap:20px; align-items:center}
+    .map-card strong{display:block; text-transform:uppercase; letter-spacing:.08em; font-size:.82rem}
+    .map-card span{display:block; color:var(--muted); font-size:.72rem; margin-top:4px}
+
+    /* FAQ */
+    .faq-wrap{display:grid; grid-template-columns:.65fr 1fr; gap:90px}
+    .faq-wrap h2{position:sticky; top:140px; font-family:"Bebas Neue",sans-serif; font-size:6rem; line-height:.84; font-weight:400; margin:0}
+    .faq-item{border-bottom:1px solid var(--line)}
+    .faq-question{width:100%; text-align:left; color:var(--paper); border:0; background:transparent; padding:24px 0; display:flex; justify-content:space-between; gap:20px; align-items:center; font-weight:700}
+    .faq-question span:last-child{width:34px; height:34px; border:1px solid var(--line); border-radius:50%; display:grid; place-items:center; transition:.25s}
+    .faq-item.open .faq-question span:last-child{transform:rotate(45deg); background:var(--gold); color:var(--ink); border-color:var(--gold)}
+    .faq-answer{max-height:0; overflow:hidden; transition:max-height .35s ease}
+    .faq-answer p{margin:0 0 24px; color:var(--muted); font-size:.86rem; max-width:680px}
+
+    /* Booking */
+    .booking-section{padding-bottom:50px}
+    .booking-shell{display:grid; grid-template-columns:.9fr 1.1fr; background:var(--paper); color:var(--ink); border-radius:30px; overflow:hidden}
+    .booking-intro{padding:65px; background:var(--gold); display:flex; flex-direction:column}
+    .booking-intro h2{font-family:"Bebas Neue",sans-serif; font-size:6.2rem; line-height:.82; font-weight:400; margin:0 0 24px}
+    .booking-intro p{color:#4e3b23}
+    .booking-contact{margin-top:auto; padding-top:40px; display:grid; gap:14px}
+    .contact-line{display:flex; align-items:center; gap:13px; font-weight:800; font-size:.82rem}
+    .contact-line svg{width:20px}
+    .booking-form{padding:65px}
+    .form-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    .field{display:grid; gap:8px}
+    .field.full{grid-column:1/-1}
+    .field label{font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; font-weight:800; color:#655f57}
+    .field input,.field select,.field textarea{width:100%; background:#e7dfd4; border:1px solid rgba(0,0,0,.1); color:var(--ink); min-height:54px; padding:13px 15px; border-radius:12px; outline:none; transition:.2s}
+    .field textarea{min-height:110px; resize:vertical}
+    .field input:focus,.field select:focus,.field textarea:focus{background:#fff; border-color:var(--gold); box-shadow:0 0 0 4px rgba(205,160,100,.14)}
+    .form-submit{margin-top:22px; display:flex; align-items:center; gap:14px; flex-wrap:wrap}
+    .form-hint{font-size:.7rem; color:#7d756c; max-width:330px}
+    .form-success{display:none; margin-top:18px; padding:15px; border:1px solid #7aad85; background:#e5f1e8; color:#244c2e; border-radius:12px; font-size:.82rem}
+    .form-success.show{display:block}
+
+    /* Footer */
+    footer{padding:60px 0 110px}
+    .footer-top{display:flex; justify-content:space-between; gap:50px; align-items:end; padding-bottom:46px; border-bottom:1px solid var(--line)}
+    .footer-big{font-family:"Bebas Neue",sans-serif; font-size:clamp(4.3rem,9vw,9rem); line-height:.76; font-weight:400; margin:0; text-transform:uppercase}
+    .footer-cta{text-align:right}
+    .footer-cta p{color:var(--muted); max-width:320px; margin:0 0 18px auto}
+    .footer-bottom{display:grid; grid-template-columns:1.2fr .8fr .8fr; gap:40px; padding-top:35px; color:var(--muted); font-size:.76rem}
+    .footer-links{display:flex; flex-wrap:wrap; gap:16px 22px}
+    .footer-links a:hover{color:var(--gold)}
+
+    /* Modal */
+    .lightbox{position:fixed; inset:0; z-index:3000; display:none; place-items:center; padding:30px; background:rgba(0,0,0,.88); backdrop-filter:blur(10px)}
+    .lightbox.open{display:grid}
+    .lightbox img{max-width:min(900px,92vw); max-height:88vh; box-shadow:0 40px 100px #000}
+    .lightbox-close{position:absolute; right:24px; top:24px; width:48px; height:48px; border-radius:50%; border:1px solid rgba(255,255,255,.3); background:rgba(0,0,0,.4); color:#fff; font-size:1.4rem}
+
+    .mobile-book-bar{display:none}
+    .reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease,transform .7s ease}
+    .reveal.in{opacity:1; transform:none}
+
+    @media (max-width:1060px){
+      .nav-links,.open-pill{display:none}
+      .menu-toggle{display:grid; place-items:center}
+      .nav-links.open{display:flex; position:absolute; left:20px; right:20px; top:82px; background:#111; border:1px solid var(--line); padding:25px; border-radius:18px; flex-direction:column; align-items:flex-start; box-shadow:var(--shadow)}
+      .hero-grid{grid-template-columns:1fr; gap:58px}
+      .hero{padding-top:135px}
+      .hero-visual{min-height:680px; max-width:700px; width:100%; margin:auto}
+      .hero-photo-main{left:70px}
+      .section-head{grid-template-columns:1fr; gap:24px}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+      .experience-grid{grid-template-columns:1fr; gap:60px}
+      .portrait-stack{max-width:680px; width:100%}
+      .finder{grid-template-columns:1fr; gap:35px}
+      .gallery-grid{grid-template-columns:1fr 1fr; grid-auto-rows:260px}
+      .gallery-item:nth-child(1){grid-row:span 2}
+      .gallery-item:nth-child(4){grid-column:span 1}
+      .reviews-grid{grid-template-columns:1fr 1fr}
+      .review-card:last-child{grid-column:1/-1}
+      .area-panel,.booking-shell{grid-template-columns:1fr}
+      .map-visual{min-height:500px}
+      .faq-wrap{grid-template-columns:1fr; gap:40px}
+      .faq-wrap h2{position:static}
+    }
+
+    @media (max-width:720px){
+      :root{--container:min(100% - 28px,1180px); --radius:18px}
+      body{padding-bottom:72px}
+      .section{padding:85px 0}
+      .nav{height:76px}
+      .brand{min-width:0}
+      .brand-mark{width:41px; height:41px}
+      .brand-copy strong{font-size:1.05rem}
+      .brand-copy span{display:none}
+      .nav-actions .btn{display:none}
+      .hero{min-height:auto; padding:125px 0 55px}
+      .hero h1{font-size:clamp(4.35rem,22vw,7.2rem)}
+      .hero-copy{font-size:.9rem}
+      .hero-actions .btn{width:100%}
+      .hero-proof{gap:14px; font-size:.66rem}
+      .hero-visual{min-height:500px}
+      .hero-photo-main{inset:0 0 50px 34px; border-radius:110px 0 110px 0}
+      .floating-card{width:185px; padding:20px}
+      .floating-card .big{font-size:3rem}
+      .photo-badge{width:94px; height:94px; right:-5px; bottom:12px; font-size:.8rem}
+      .vertical-label{display:none}
+      .trust-strip{grid-template-columns:1fr 1fr; margin-top:48px}
+      .trust-stat{padding:21px; border-bottom:1px solid var(--line)}
+      .trust-stat:nth-child(2){border-right:0}
+      .trust-stat:nth-child(3),.trust-stat:nth-child(4){border-bottom:0}
+      .section-title{font-size:clamp(3.5rem,18vw,5.4rem)}
+      .services-grid{grid-template-columns:1fr}
+      .service-card{min-height:260px}
+      .portrait-stack{min-height:520px}
+      .portrait-primary{width:84%; height:78%; border-radius:0 100px 0 100px}
+      .portrait-secondary{width:58%; height:44%}
+      .experience-copy h2{font-size:4.1rem}
+      .feature-row{grid-template-columns:48px 1fr}
+      .feature-row em{display:none}
+      .finder{padding:30px 22px; border-radius:22px}
+      .finder h2{font-size:3.7rem}
+      .finder-result{align-items:flex-start; flex-direction:column}
+      .gallery-grid{grid-template-columns:1fr 1fr; grid-auto-rows:190px; gap:7px}
+      .gallery-item:nth-child(1){grid-row:span 2}
+      .gallery-item:nth-child(4){grid-column:span 2}
+      .gallery-cta{align-items:flex-start; flex-direction:column}
+      .team-grid{grid-template-columns:1fr}
+      .team-card{min-height:500px}
+      .reviews-grid{grid-template-columns:1fr}
+      .review-card:last-child{grid-column:auto}
+      .rating-lockup strong{font-size:6rem}
+      .process-grid{grid-template-columns:1fr}
+      .process-step{border-right:0; border-bottom:1px solid var(--line); margin:0; padding:30px 0}
+      .area-copy,.booking-intro,.booking-form{padding:38px 24px}
+      .area-copy h2{font-size:4rem}
+      .map-visual{min-height:430px}
+      .map-card{left:15px; right:15px; bottom:15px; flex-direction:column; align-items:flex-start}
+      .faq-wrap h2{font-size:4.3rem}
+      .booking-intro h2{font-size:4.5rem}
+      .form-grid{grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+      .footer-top{align-items:flex-start; flex-direction:column}
+      .footer-cta{text-align:left}
+      .footer-cta p{margin-left:0}
+      .footer-bottom{grid-template-columns:1fr}
+      .mobile-book-bar{position:fixed; z-index:2000; display:grid; grid-template-columns:.72fr 1.28fr; left:0; right:0; bottom:0; height:72px; border-top:1px solid rgba(255,255,255,.15); background:#090909; box-shadow:0 -10px 35px rgba(0,0,0,.35)}
+      .mobile-book-bar a{display:flex; align-items:center; justify-content:center; gap:8px; font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em}
+      .mobile-book-bar a:last-child{background:var(--gold); color:var(--ink)}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:.001ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; transition-duration:.001ms!important}
+      .reveal{opacity:1; transform:none}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Barbershop",
+    "name":"The Fade Room VIP Barber Studio",
+    "telephone":"+1-714-924-4277",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"763 S Main St, Suite 105",
+      "addressLocality":"Orange",
+      "addressRegion":"CA",
+      "postalCode":"92868",
+      "addressCountry":"US"
+    },
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"282"},
+    "sameAs":["https://www.instagram.com/thefaderoomoc/","https://www.instagram.com/mykedoe/"],
+    "url":"https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange",
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"10:00","closes":"15:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday","Friday"],"opens":"10:00","closes":"20:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"18:00"}
+    ],
+    "priceRange":"$$-$$$"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="The Fade Room VIP home">
+        <span class="brand-mark">FR</span>
+        <span class="brand-copy"><strong>The Fade Room</strong><span>VIP Barber Studio · Orange, CA</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Our work</a></li>
+        <li><a href="#team">Barbers</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#location">Location</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="open-pill"><span class="open-dot" id="openDot"></span><span id="openText">Checking hours</span></div>
+        <a class="btn btn-primary" href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" rel="noopener">Book now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-kicker">
+            <span class="rating" aria-label="5 stars">★★★★★</span>
+            <span>5.0 from 282 Booksy reviews</span>
+          </div>
+          <h1><span class="small-line">Walk in as you are.</span><span class="stroke">Leave</span><span class="gold">VIP.</span></h1>
+          <p class="hero-copy">Precision fades, detailed beard work, braids, loc care and elevated grooming—delivered in a private studio where the appointment is built around you.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" rel="noopener">Choose your time
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#work">See the work</a>
+          </div>
+          <div class="hero-proof">
+            <span class="proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s8-4 8-10V5l-8-3-8 3v6c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Confirmed-client reviews</span>
+            <span class="proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11h18M5 11v8h14v-8M7 11V7a5 5 0 0 1 10 0v4"/></svg>Inside Phenix Salon Suites</span>
+            <span class="proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>Online booking</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-photo-main">
+            <img src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/386433/review_photos/4536d120a8d2410d9d4106324fd404bb.jpeg" alt="Precision fade by The Fade Room VIP Barber Studio" fetchpriority="high" />
+          </div>
+          <div class="floating-card">
+            <span class="big">282</span>
+            <strong>Verified reviews</strong>
+            <span>281 five-star ratings on Booksy</span>
+          </div>
+          <div class="vertical-label">Orange County · California</div>
+          <div class="photo-badge"><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 5a45 45 0 1 0 0 90 45 45 0 0 0 0-90Zm0 7a38 38 0 1 1 0 76 38 38 0 0 1 0-76Z"/></svg>Precision<br/>over rush</div>
+        </div>
+      </div>
+
+      <div class="container trust-strip reveal">
+        <div class="trust-stat"><strong>5.0</strong><span>Booksy rating</span></div>
+        <div class="trust-stat"><strong>31</strong><span>Service options</span></div>
+        <div class="trust-stat"><strong>2</strong><span>Skilled barbers</span></div>
+        <div class="trust-stat"><strong>OC</strong><span>Orange, California</span></div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-item">Precision fades <i></i> Beard detailing <i></i> Hot towel shaves <i></i> Braids & twists <i></i> Loc care <i></i> VIP grooming <i></i> House calls <i></i></div>
+        <div class="marquee-item">Precision fades <i></i> Beard detailing <i></i> Hot towel shaves <i></i> Braids & twists <i></i> Loc care <i></i> VIP grooming <i></i> House calls <i></i></div>
+      </div>
+    </div>
+
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Built around your look</p>
+            <h2 class="section-title">Choose your<br/><span class="outline-text">experience.</span></h2>
+          </div>
+          <p class="section-copy">From a clean maintenance cut to the complete VIP reset, every service is designed with clear timing, attention to detail and a finish that holds up after you leave the chair.</p>
+        </div>
+
+        <div class="service-tabs reveal" role="tablist" aria-label="Filter services">
+          <button class="service-tab active" data-filter="all">Featured</button>
+          <button class="service-tab" data-filter="cuts">Cuts & fades</button>
+          <button class="service-tab" data-filter="beard">Beard & shave</button>
+          <button class="service-tab" data-filter="vip">VIP treatments</button>
+          <button class="service-tab" data-filter="texture">Braids & locs</button>
+        </div>
+
+        <div class="services-grid" id="servicesGrid">
+          <article class="service-card reveal" data-category="cuts">
+            <span class="service-number">01 / Signature</span>
+            <h3>Precision Haircut</h3>
+            <p>Tapers, fades, combovers and clean line work shaped to your features and preferred finish.</p>
+            <div class="service-footer"><div class="service-price"><span>Starting at</span><strong>$50–$70</strong></div><a class="round-arrow" href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" aria-label="Book a haircut">↗</a></div>
+          </article>
+          <article class="service-card reveal" data-category="beard">
+            <span class="service-number">02 / Complete</span>
+            <h3>Cut + Beard</h3>
+            <p>A precision cut paired with beard shaping, sharp lines and a finished, balanced profile.</p>
+            <div class="service-footer"><div class="service-price"><span>Starting at</span><strong>$60–$85</strong></div><a class="round-arrow" href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" aria-label="Book cut and beard">↗</a></div>
+          </article>
+          <article class="service-card reveal" data-category="vip">
+            <span class="service-number">03 / The full reset</span>
+            <h3>Full VIP Service</h3>
+            <p>Haircut, beard trim or hot towel shave, optional enhancements, eyebrow trim and black mask.</p>
+            <div class="service-footer"><div class="service-price"><span>75 minutes</span><strong>$150</strong></div><a class="round-arrow" href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" aria-label="Book full VIP service">↗</a></div>
+          </article>
+          <article class="service-card reveal" data-category="beard">
+            <span class="service-number">04 / Classic ritual</span>
+            <h3>Hot Towel Shave</h3>
+            <p>Traditional hot steam preparation and a clean, comfortable shave with a refined finish.</p>
+            <div class="service-footer"><div class="service-price"><span>45 minutes</span><strong>$85</strong></div><a class="round-arrow" href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" aria-label="Book hot towel shave">↗</a></div>
+          </article>
+          <article class="service-card reveal" data-category="texture">
+            <span class="service-number">05 / Texture</span>
+            <h3>Braids, Cornrows & Twists</h3>
+            <p>Top-of-head or full-head styling, with careful sectioning and a finish designed to last.</p>
+            <div class="service-footer"><div class="service-price"><span>Starting at</span><strong>$80+</strong></div><a class="round-arrow" href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" aria-label="Book braids">↗</a></div>
+          </article>
+          <article class="service-card reveal" data-category="texture">
+            <span class="service-number">06 / Maintenance</span>
+            <h3>Loc Retwist</h3>
+            <p>High-top or full-head retwist options, with haircut combinations available for a complete refresh.</p>
+            <div class="service-footer"><div class="service-price"><span>Starting at</span><strong>$100+</strong></div><a class="round-arrow" href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" aria-label="Book loc retwist">↗</a></div>
+          </article>
+          <article class="service-card reveal" data-category="cuts">
+            <span class="service-number">07 / Custom</span>
+            <h3>Haircut + Design</h3>
+            <p>Clean barbering with custom line or pattern detail for a look that is personal and photo-ready.</p>
+            <div class="service-footer"><div class="service-price"><span>Starting at</span><strong>$75+</strong></div><a class="round-arrow" href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" aria-label="Book haircut and design">↗</a></div>
+          </article>
+          <article class="service-card reveal" data-category="vip">
+            <span class="service-number">08 / Mobile</span>
+            <h3>House Call</h3>
+            <p>Premium barbering brought to you. Call or text to confirm location, timing and availability.</p>
+            <div class="service-footer"><div class="service-price"><span>Starting at</span><strong>$200+</strong></div><a class="round-arrow" href="tel:+17149244277" aria-label="Call about a house call">↗</a></div>
+          </article>
+          <article class="service-card reveal" data-category="vip">
+            <span class="service-number">09 / Skin care</span>
+            <h3>Black Mask Treatment</h3>
+            <p>A focused grooming add-on that helps complete the fresh-cut feeling and polished finish.</p>
+            <div class="service-footer"><div class="service-price"><span>30 minutes</span><strong>$45</strong></div><a class="round-arrow" href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" aria-label="Book black mask treatment">↗</a></div>
+          </article>
+        </div>
+        <p class="service-note reveal">Prices and durations shown reflect current Booksy listings and may vary by barber, hair length, requested detail or after-hours availability.</p>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container experience-grid">
+        <div class="portrait-stack reveal">
+          <div class="portrait-primary"><img src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/386433/review_photos/5ccd84c53a714fe3952ce072d2c3707e.jpeg" alt="Detailed haircut from The Fade Room VIP portfolio" loading="lazy" /></div>
+          <div class="portrait-secondary"><img src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/386433/review_photos/92ab55d2fa2f4517802971c298358a7d.jpeg" alt="Sharp line-up and fade detail" loading="lazy" /></div>
+          <div class="portrait-label">The VIP standard</div>
+        </div>
+        <div class="experience-copy reveal">
+          <p class="eyebrow">More than a haircut</p>
+          <h2>A private studio.<br/><span class="gold">No assembly line.</span></h2>
+          <p>The Fade Room is built for clients who care about the details. Your barber listens first, confirms the look and takes the time needed to get the blend, line and finish right.</p>
+          <div class="feature-list">
+            <div class="feature-row"><span class="feature-icon">✦</span><div><strong>Consultation before clippers</strong><span>Start with your reference, routine and preferred finish.</span></div><em>Personalized</em></div>
+            <div class="feature-row"><span class="feature-icon">⌁</span><div><strong>Precision without the rushed-chair feel</strong><span>Dedicated appointment times from 15 to 150 minutes.</span></div><em>Detailed</em></div>
+            <div class="feature-row"><span class="feature-icon">✓</span><div><strong>Comfort built in</strong><span>Parking, Wi-Fi and a child-friendly studio environment.</span></div><em>Easy visit</em></div>
+            <div class="feature-row"><span class="feature-icon">↗</span><div><strong>Book in under a minute</strong><span>See services, pricing and live appointment availability online.</span></div><em>Booksy</em></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="finder-section">
+      <div class="container finder reveal">
+        <div>
+          <p class="eyebrow">Quick service finder</p>
+          <h2>Not sure what<br/>to book?</h2>
+          <p>Choose the result you want. We will point you toward the best-fit appointment before you open the booking calendar.</p>
+        </div>
+        <div class="finder-steps">
+          <div class="finder-question">
+            <label>1. What needs attention?</label>
+            <div class="choice-row" data-question="focus">
+              <button class="choice selected" data-value="hair">Hair</button><button class="choice" data-value="hair-beard">Hair + beard</button><button class="choice" data-value="beard">Beard only</button><button class="choice" data-value="texture">Braids / locs</button>
+            </div>
+          </div>
+          <div class="finder-question">
+            <label>2. What kind of experience?</label>
+            <div class="choice-row" data-question="level">
+              <button class="choice selected" data-value="standard">Clean & precise</button><button class="choice" data-value="vip">Full VIP treatment</button><button class="choice" data-value="mobile">Come to me</button>
+            </div>
+          </div>
+          <div class="finder-result">
+            <div><small>Best match</small><strong id="finderRecommendation">Precision Haircut · $50–$70</strong></div>
+            <a class="btn btn-primary" id="finderBook" href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" rel="noopener">Check times</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Real client work</p><h2 class="section-title">Proof is in<br/><span class="gold">the finish.</span></h2></div>
+          <p class="section-copy">Clean transitions. Controlled shape. Sharp lines without an overdone finish. Explore real client photos from The Fade Room portfolio and confirmed Booksy reviews.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item reveal"><img src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/386433/review_photos/0192d7d0033b414691699bdb17b4e77a.jpeg" alt="Finished haircut by The Fade Room VIP" loading="lazy" /></figure>
+          <figure class="gallery-item reveal"><img src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/386433/review_photos/8e76d7ba9a8446548591a1c5829d3ebf.jpeg" alt="Client fade portfolio photo" loading="lazy" /></figure>
+          <figure class="gallery-item reveal"><img src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/386433/review_photos/626dea08f110462a81f3ddef6debfb9a.jpeg" alt="Barber haircut finish" loading="lazy" /></figure>
+          <figure class="gallery-item reveal"><img src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/386433/review_photos/9b6e4df6169442658c0bccce749e15b1.jpeg" alt="Precision cut and line-up" loading="lazy" /></figure>
+          <figure class="gallery-item reveal"><img src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/386433/review_photos/890fef2382ac447db564d9341c58ac83.jpeg" alt="Fresh client haircut" loading="lazy" /></figure>
+          <figure class="gallery-item reveal"><img src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/386433/review_photos/1d3f1205917441eda3921b3418770ff5.jpeg" alt="Detailed barbering work" loading="lazy" /></figure>
+        </div>
+        <div class="gallery-cta reveal"><span>Tap any image for a closer look. More client work is available through the studio's Booksy and Instagram profiles.</span><a class="btn btn-ghost" href="https://www.instagram.com/thefaderoomoc/" target="_blank" rel="noopener">Follow @thefaderoomoc</a></div>
+      </div>
+    </section>
+
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Pick your barber</p><h2 class="section-title">Two artists.<br/><span class="outline-text">One standard.</span></h2></div>
+          <p class="section-copy">Choose the barber, service and time that fit your look. Each profile offers its own service menu, timing and pricing through Booksy.</p>
+        </div>
+        <div class="team-grid">
+          <article class="team-card reveal">
+            <img src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/386433/resource_photos/a44a30285a8e4a08862441a4cc836bb5.jpeg" alt="Mykedoe, barber at The Fade Room VIP" loading="lazy" />
+            <div class="team-info"><div><h3>Mykedoe</h3><p>Owner · Barber · VIP services</p></div><a class="social-circle" href="https://www.instagram.com/mykedoe/" target="_blank" rel="noopener" aria-label="Mykedoe on Instagram">↗</a></div>
+          </article>
+          <article class="team-card reveal">
+            <img src="https://d2zdpiztbgorvt.cloudfront.net/region1/us/386433/resource_photos/934c41c06454436dbfdc1204a2788270.jpeg" alt="CutsLikeMike, barber at The Fade Room VIP" loading="lazy" />
+            <div class="team-info"><div><h3>@CutsLikeMike</h3><p>Barber · Braids · Loc care</p></div><a class="social-circle" href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" rel="noopener" aria-label="Book CutsLikeMike">↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Confirmed-client feedback</p><div class="rating-lockup"><strong>5.0</strong><div><span>★★★★★</span><small>282 Booksy reviews</small></div></div></div>
+          <h2 class="section-title">They came<br/>back <span class="outline-text">sharp.</span></h2>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card reveal"><div class="review-stars">★★★★★</div><blockquote>“Great experience at this barbershop. The barber took the time to listen, confirmed the details before starting and delivered exactly the cut I had in mind.”</blockquote><div class="review-person"><div><strong>Kevin</strong><span>Haircut · Mykedoe</span></div><span class="verified">Confirmed client</span></div></article>
+          <article class="review-card reveal"><div class="review-stars">★★★★★</div><blockquote>“Mike did a great job. Wouldn't let me leave until it was perfect.”</blockquote><div class="review-person"><div><strong>Stephon</strong><span>Beard trim · Mykedoe</span></div><span class="verified">Confirmed client</span></div></article>
+          <article class="review-card reveal"><div class="review-stars">★★★★★</div><blockquote>“Always on time, tough cuts, good vibes.”</blockquote><div class="review-person"><div><strong>Tre</strong><span>Haircut · @CutsLikeMike</span></div><span class="verified">Confirmed client</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Simple from start to finish</p><h2 class="section-title">Your next cut<br/>in <span class="gold">three moves.</span></h2></div>
+          <p class="section-copy">No back-and-forth needed. Compare services, choose your barber and lock in a time that works from the live Booksy calendar.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step reveal"><span class="num">01</span><h3>Pick the service</h3><p>Choose a cut, beard service, VIP package, braids, loc maintenance or a custom appointment.</p></article>
+          <article class="process-step reveal"><span class="num">02</span><h3>Choose your barber</h3><p>Review individual menus, prices and available times for Mykedoe or @CutsLikeMike.</p></article>
+          <article class="process-step reveal"><span class="num">03</span><h3>Show up. Leave ready.</h3><p>Arrive at Suite 105 inside Phenix Salon Suites and get the look dialed in.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="location">
+      <div class="container area-panel reveal">
+        <div class="area-copy">
+          <p class="eyebrow">Orange, California</p>
+          <h2>Worth the<br/><span class="gold">short drive.</span></h2>
+          <p>Located on South Main Street inside Phenix Salon Suites, The Fade Room is convenient for clients in Orange and nearby Orange County communities.</p>
+          <div class="area-tags"><span class="area-tag">Orange</span><span class="area-tag">Santa Ana</span><span class="area-tag">Anaheim</span><span class="area-tag">Tustin</span><span class="area-tag">Garden Grove</span><span class="area-tag">Fullerton</span></div>
+          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=763+S+Main+St+Suite+105+Orange+CA+92868" target="_blank" rel="noopener">Get directions
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="map-visual">
+          <div class="map-fallback"><div class="pin"><span>FR</span></div></div>
+          <div class="map-card"><div><strong>The Fade Room VIP Barber Studio</strong><span>763 S Main St, Suite 105 · Orange, CA 92868</span></div><a class="btn btn-dark" href="tel:+17149244277">Call (714) 924-4277</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container faq-wrap">
+        <div class="reveal"><p class="eyebrow">Before you book</p><h2>Good<br/><span class="gold">questions.</span></h2></div>
+        <div class="faq-list reveal">
+          <article class="faq-item open"><button class="faq-question"><span>Where is the studio located?</span><span>+</span></button><div class="faq-answer"><p>The Fade Room VIP Barber Studio is located at 763 S Main St, Suite 105, Orange, CA 92868, inside Phenix Salon Suites.</p></div></article>
+          <article class="faq-item"><button class="faq-question"><span>Do I need an appointment?</span><span>+</span></button><div class="faq-answer"><p>Online booking is the best way to secure your preferred barber and time. Live availability, service durations and prices are shown through Booksy.</p></div></article>
+          <article class="faq-item"><button class="faq-question"><span>Which service should I choose for a haircut and beard?</span><span>+</span></button><div class="faq-answer"><p>Select “Hair cut & Beard trim” or “Haircut and Beard Trim.” For added treatments, enhancements or a hot towel shave, choose one of the VIP services.</p></div></article>
+          <article class="faq-item"><button class="faq-question"><span>Are house calls available?</span><span>+</span></button><div class="faq-answer"><p>Yes. House calls are listed from $200+ and should be scheduled by calling or texting the studio to confirm location and availability.</p></div></article>
+          <article class="faq-item"><button class="faq-question"><span>Does the studio offer braids and loc services?</span><span>+</span></button><div class="faq-answer"><p>Yes. Current options include braids, cornrows, twists, high-top and full-head loc retwists, plus combination services with a haircut.</p></div></article>
+          <article class="faq-item"><button class="faq-question"><span>What amenities are available?</span><span>+</span></button><div class="faq-answer"><p>The Booksy listing notes parking, Wi-Fi and a child-friendly environment.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="book">
+      <div class="container booking-shell reveal">
+        <div class="booking-intro">
+          <div><p class="eyebrow">Your chair is waiting</p><h2>Book the<br/>upgrade.</h2><p>Tell us the look you are after, then continue to the secure Booksy calendar to choose the exact service, barber and appointment time.</p></div>
+          <div class="booking-contact">
+            <a class="contact-line" href="tel:+17149244277"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"/></svg>(714) 924-4277</a>
+            <a class="contact-line" href="https://www.instagram.com/thefaderoomoc/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg>@thefaderoomoc</a>
+            <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>763 S Main St, Suite 105</div>
+          </div>
+        </div>
+        <form class="booking-form" id="bookingForm">
+          <div class="form-grid">
+            <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="First and last name" required /></div>
+            <div class="field"><label for="phone">Mobile number</label><input id="phone" name="phone" type="tel" placeholder="(000) 000-0000" required /></div>
+            <div class="field"><label for="service">Interested in</label><select id="service" name="service"><option>Precision haircut</option><option>Haircut + beard</option><option>Full VIP service</option><option>Hot towel shave</option><option>Braids / twists</option><option>Loc retwist</option><option>House call</option><option>Not sure yet</option></select></div>
+            <div class="field"><label for="barber">Preferred barber</label><select id="barber" name="barber"><option>No preference</option><option>Mykedoe</option><option>@CutsLikeMike</option></select></div>
+            <div class="field full"><label for="notes">Anything your barber should know?</label><textarea id="notes" name="notes" placeholder="Current style, target look, reference photo, special occasion, hair length..."></textarea></div>
+          </div>
+          <div class="form-submit"><button class="btn btn-dark" type="submit">Continue to live booking
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><span class="form-hint">This concept form does not store personal information. You will continue to the studio's Booksy page to choose a live time.</span></div>
+          <div class="form-success" id="formSuccess">Perfect. Opening the live Booksy calendar so you can finish choosing your barber and appointment time.</div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <h2 class="footer-big">Stay<br/><span class="gold">sharp.</span></h2>
+        <div class="footer-cta"><p>Fresh openings move quickly. Choose your service and secure your next appointment online.</p><a class="btn btn-primary" href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" rel="noopener">Book on Booksy</a></div>
+      </div>
+      <div class="footer-bottom">
+        <div><strong style="color:#fff">The Fade Room VIP Barber Studio</strong><br/>Located inside Phenix Salon Suites<br/>763 S Main St, Suite 105, Orange, CA 92868</div>
+        <div class="footer-links"><a href="#services">Services</a><a href="#work">Work</a><a href="#team">Barbers</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a></div>
+        <div>Tue 10–3 · Wed–Fri 10–8 · Sat 9–6<br/>Closed Monday & Sunday<br/><a href="tel:+17149244277" style="color:var(--gold)">(714) 924-4277</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close image">×</button><img src="" alt="Expanded portfolio image" /></div>
+
+  <div class="mobile-book-bar"><a href="tel:+17149244277">Call studio</a><a href="https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange" target="_blank" rel="noopener">Book your appointment</a></div>
+
+  <script>
+    const BOOKING_URL = 'https://booksy.com/en-us/386433_the-fade-room-vip-barber-studio_barber-shop_103798_orange';
+
+    // Sticky header + mobile navigation
+    const header = document.getElementById('siteHeader');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 24), {passive:true});
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navLinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false');
+    }));
+
+    // Live open/closed indicator in Pacific Time
+    function updateHours(){
+      const parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+      const get = type => parts.find(p => p.type === type)?.value;
+      const day = get('weekday');
+      const mins = Number(get('hour')) * 60 + Number(get('minute'));
+      const hours = {Tue:[600,900],Wed:[600,1200],Thu:[600,1200],Fri:[600,1200],Sat:[540,1080]};
+      const range = hours[day];
+      const isOpen = Boolean(range && mins >= range[0] && mins < range[1]);
+      const dot = document.getElementById('openDot');
+      const text = document.getElementById('openText');
+      dot.classList.toggle('closed', !isOpen);
+      text.textContent = isOpen ? 'Open now' : 'Currently closed';
+    }
+    updateHours();
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if(entry.isIntersecting){entry.target.classList.add('in'); observer.unobserve(entry.target);}
+    }), {threshold:.12, rootMargin:'0px 0px -35px'});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Service filtering
+    document.querySelectorAll('.service-tab').forEach(tab => tab.addEventListener('click', () => {
+      document.querySelectorAll('.service-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
+      document.querySelectorAll('.service-card').forEach(card => card.classList.toggle('hidden', filter !== 'all' && card.dataset.category !== filter));
+    }));
+
+    // Interactive service finder
+    const finderState = {focus:'hair', level:'standard'};
+    document.querySelectorAll('.choice-row').forEach(row => row.addEventListener('click', e => {
+      const btn = e.target.closest('.choice'); if(!btn) return;
+      row.querySelectorAll('.choice').forEach(c => c.classList.remove('selected'));
+      btn.classList.add('selected'); finderState[row.dataset.question] = btn.dataset.value; updateFinder();
+    }));
+    function updateFinder(){
+      let result = 'Precision Haircut · $50–$70';
+      if(finderState.level === 'mobile') result = 'House Call · $200+';
+      else if(finderState.level === 'vip') result = 'Full VIP Service · $150';
+      else if(finderState.focus === 'hair-beard') result = 'Haircut + Beard · $60–$85';
+      else if(finderState.focus === 'beard') result = 'Beard / Shape Up · $30–$45';
+      else if(finderState.focus === 'texture') result = 'Braids or Loc Retwist · $80+';
+      document.getElementById('finderRecommendation').textContent = result;
+    }
+
+    // FAQ accordions
+    document.querySelectorAll('.faq-question').forEach(button => button.addEventListener('click', () => {
+      const item = button.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const opening = !item.classList.contains('open');
+      item.classList.toggle('open', opening);
+      answer.style.maxHeight = opening ? answer.scrollHeight + 'px' : '0px';
+    }));
+    const firstAnswer = document.querySelector('.faq-item.open .faq-answer');
+    if(firstAnswer) firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+
+    // Portfolio lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    document.querySelectorAll('.gallery-item img').forEach(img => img.addEventListener('click', () => {
+      lightboxImg.src = img.src; lightboxImg.alt = img.alt; lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden','false');
+    }));
+    const closeLightbox = () => {lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden','true'); lightboxImg.src='';};
+    lightbox.querySelector('button').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => {if(e.target === lightbox) closeLightbox();});
+    document.addEventListener('keydown', e => {if(e.key === 'Escape') closeLightbox();});
+
+    // Concept form: validate, show a helpful message, then open the real booking page
+    document.getElementById('bookingForm').addEventListener('submit', e => {
+      e.preventDefault();
+      if(!e.currentTarget.reportValidity()) return;
+      document.getElementById('formSuccess').classList.add('show');
+      setTimeout(() => window.open(BOOKING_URL,'_blank','noopener'), 650);
+    });
+  </script>
+
+  <!--
+    Website concept created from publicly available business information.
+    Primary source: current Booksy business profile.
+    Contact/hours cross-checked against public Waze/ClassPass/Fresha listings.
+    All portfolio/staffer images are loaded from the business's public Booksy media URLs.
+  -->
+</body>
+</html>
